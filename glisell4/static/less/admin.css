@@ -1,0 +1,8 @@
+ul.objects div.field label {
+  font-size: 13px;
+  font-weight: normal;
+  color: black;
+}
+body.ready .logo img {
+  width: 100%!important;
+}

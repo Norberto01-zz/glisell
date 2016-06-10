@@ -1,0 +1,345 @@
+.ds{
+  display: none;
+}
+.fpd{
+
+}
+.swi{
+  width:100%;
+  max-width: 100%;
+}
+.spa{
+  padding: 1em; 
+}
+input, textarea, select, .richtext, .tagit{
+  border-radius: 0px;
+}
+#sale-state-bar{
+  position: absolute;
+  right: 0;
+  top: 0; 
+  width: 40%;
+  z-index: 9999;
+  .sale-status{
+    display: inline-block;
+    padding: 0.9em;
+    color: #000;
+  }
+
+}
+.state-active{
+  background-color: #43b1b0;  
+}
+body.model-sale{
+  label{
+    width: 30%;
+  }
+  #page-edit-form {
+
+    section#content {
+      padding-top: 0;
+      ul {
+        li.sale-state-info{
+          padding: 0.5em;
+          h2{ 
+            padding: 1em 4.2em;
+            position: relative;
+            background: #fff;
+            &:before{
+              content: '';
+            }
+            label{
+              .ds;
+            }
+          }
+          >fieldset{
+            .ds;
+          }
+          margin-bottom: 0;
+        }
+        /* ----- ------ ----- ----- ----- */
+        li.sale-general-info{
+          label{ 
+            text-align: right;
+            padding-right: .7em;
+            padding-top: 0.5em;
+            padding-bottom: 0;
+          }
+          div.field-content{
+            div.input{
+              &:before{
+                left: .2em;
+                font-size: 1.7em;
+                top: .2em;
+              }
+              input, select{
+                padding: .5em;
+                padding-left: 2.6em;
+                font-size: 12px;
+                color: #000;
+              }
+              select{
+                padding: 0.5em 0.5em .5em 0.6em;
+              }
+              span{
+                &:after{
+                  font-size: 1.7em;
+                }
+              }
+            }
+          }
+          fieldset{
+            ul{
+              li{
+                div.field-content{
+                  width:70%;
+                }
+              }
+            }
+          }
+        }
+        li.title.required{
+          .ds;
+        }
+        li.amounts-sale-info{
+          ul.fields{
+            li.float_field{
+              div.field{
+                label{
+                  float: left;
+                }
+                div.field-content{ 
+                  width: 70%;
+                  float: right;
+                  input{
+                    padding: 0.5em;     
+                    color: #000;
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+          }
+        }
+        li.taxes-sale-info{
+          float: left;
+          width: 40%;
+          border: 1px solid #eee;
+          fieldset{
+            .swi;
+          }
+          ul#id_tax_sale_rel-FORMS{
+              .swi;
+            .field-content{
+              .swi;
+              font-size:12px;
+            }
+            >li{
+              padding: 1em 4em 1em 1.5em;
+              label{
+                .ds;
+              }
+            }
+          }
+        }
+        li.sale-product-info{       
+          fieldset, .multiple fieldset{
+            .swi
+          }
+          input, textarea, select, .richtext, .tagit{
+            padding: 0.5em;
+            font-size: 12px;
+            color: #000;
+          }
+          span{
+            &:after{
+              font-size: 1.7em;
+            }
+          }
+          >fieldset{
+            .swi;
+            ul.multiple{
+              .swi;
+              >li{
+                .spa;
+                .swi;
+                >fieldset{
+                  .swi;
+                  >ul.fields{
+                    li.sale-passengers-group{
+                      position: relative;
+                      overflow: hidden;
+                      padding-bottom: 0;
+                      &:after{            
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        padding: 1px;
+                        border-bottom: 1px solid #eee;
+                        width: 100%;
+                      }
+                      li.sale-passenger-field{
+                        width: 12%;
+                        display: inline-block;
+                        padding-bottom: 0.5em;
+                        label{
+                          padding: .6em 0 0;
+                          width: initial;
+                          display: inline-block;
+                          &:after{
+                            content: '';
+                          }
+                        }
+                        .field-content{
+                          width: 50%;
+                        }
+                      }
+                    }
+                    li.sale-head-group{
+                      padding: 2%;
+                      li.sale-head-field{ 
+                        float: right;
+                        width: 26%;    
+                        position: absolute;
+                        top: 0;
+                        padding: 1em;
+                        height: 14.7%;
+                        background: #FCF2F2;
+                        border-right: 1px solid #eee;
+                        border-bottom: 1px solid #eee;
+                        label{
+                          padding: .6em 0 0;  
+                        }
+                        .field-content{
+                            width: 70%;  
+
+                        } 
+                        &.supplier-type-rel{
+                          width: 21%;           
+                          left: 0; 
+                          label{                
+                            padding: 0;
+                            padding-top: 0.6em;
+                            width: 40%;
+                            &:after{
+                              content: '';
+                            }
+                          }
+                          .field-content{
+                            width: 60%
+                          }
+                        }
+                        &.apply-disc-rel{ 
+                          left: 250px;
+                          width: 15%;
+                          .boolean_field{
+                            display: inline-block;
+                            .swi;
+                          }
+                          label{
+                            width: 75%; 
+                            margin-right:2%; 
+
+                          }
+                          .field-content{
+                            padding: .6em 0 0;  
+                            width: 10%;
+                          }
+                        }
+                        &.type-disc-rel{      
+                          left: 432px; 
+                          label{
+                            width: 45%;  
+                          }
+                          .field-content{
+                            width: 55%;
+                          }
+                        }
+                      }
+                    }
+                    /* SALE INLINE GROUP */
+                    li.sale-inline-group{
+                      padding: 0px; 
+                      li.sale-inline-field{
+                        width:13.2%;
+                        display: inline-block;
+                        padding: 0px;
+                        label, .field-content{
+                          .swi;
+                          &:after{
+                            content: '';
+                          }
+                        }
+                        .field-content{
+                          .input{ 
+                          }
+                        }
+                        input, select{ 
+                        }
+                        &.sale-num-field{
+                          width: 10.5%;
+                        }
+                      }
+                      li.duration-sale-rel{
+                        width: 10%; 
+                      }
+                      li.arrival-date-rel{
+                        width: 10%; 
+                        div.input{
+                          &:before{
+                            left: 0.2em;
+                            font-size: 1.7em;
+                            top: 0.2em;
+                          }
+                          input{
+                            padding-left: 2.6em;  
+                          }
+                        }
+                      }
+                      li.qty-sale-info{
+                        width: 7%!important;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#page-edit-form{
+  section#content{
+    ul{
+      li.sale-code-info{
+        /*.ds;*/
+      }
+      li.sale-gen-field{
+        width: 45%;
+        float: left;
+        margin-right: 5%;
+        &:second-child{
+          margin: 0;
+          float: right;
+        }
+      }
+      li.invoice-code-info{
+        li{
+            div.field-content{
+                width: 70%;
+                label{
+                    padding-top: 2em;
+                }
+                input{
+                    color: #000;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+        }
+      }
+    }
+  }
+}
